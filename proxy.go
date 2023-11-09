@@ -37,9 +37,9 @@ func (cmd *CLI) Run() error {
 			r.SetXForwarded()
 		},
 	}
-	//localProxy := httputil.NewSingleHostReverseProxy(localProxyUrl)
+	// localProxy := httputil.NewSingleHostReverseProxy(localProxyUrl)
 	http.Handle("/", localProxy)
-	log.Printf("Serving on %s\n", cmd.Listen)
+	log.Info().Msgf("Serving on %s", cmd.Listen)
 	if err := http.ListenAndServeTLS(cmd.Listen, cmd.TLSCert, cmd.TLSKey, nil); err != nil && !errors.Is(err, http.ErrServerClosed) {
 		log.Fatal().Err(err).Msg("Server error")
 		return err
