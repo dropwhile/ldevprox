@@ -22,7 +22,7 @@ func (v verboseFlag) BeforeApply() error {
 
 type CLI struct {
 	Listen   string           `name:"listen" short:"l" default:"127.0.0.1:8080" help:"listen address:port"`
-	TLSCert  string           `name:"tls-cert" default:"server.cert" help:"tls cert file path"`
+	TLSCert  string           `name:"tls-cert" default:"server.crt" help:"tls cert file path"`
 	TLSKey   string           `name:"tls-key" default:"server.key" help:"tls key file path"`
 	Upstream string           `name:"upstream" default:"http://127.0.0.1:8000" help:"upstream url"`
 	Verbose  verboseFlag      `name:"verbose" short:"v" help:"enable verbose logging"`
