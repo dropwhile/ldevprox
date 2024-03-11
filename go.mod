@@ -3,7 +3,7 @@ module github.com/dropwhile/ldevprox
 go 1.21.4
 
 require (
-	github.com/alecthomas/kong v0.8.1
+	github.com/alecthomas/kong v0.9.0
 	github.com/rs/zerolog v1.31.0
 )
 
