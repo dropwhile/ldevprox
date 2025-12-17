@@ -1,5 +1,8 @@
 # ldevprox
 
+> [!IMPORTANT]
+> Moved to [codeberg](https://codeberg.org/dropwhile/ldevprox)!
+
 ## Install
 
 ```
